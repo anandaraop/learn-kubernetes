@@ -1,7 +1,7 @@
 ---
 apiVersion: v1
 kind: ConfigMap
-spec:
+metadata:
   name: demo-cm
 data:
   URL: google.com
