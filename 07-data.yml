@@ -30,7 +30,7 @@ spec:
               key: URL
         - name: USERNAME
           valueFrom:
-            secretRef:
+            secretKeyRef:
               name: demo-secret
               key: USERNAME
 
