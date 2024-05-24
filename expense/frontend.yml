@@ -6,4 +6,19 @@ spec:
   containers:
     - name: frontend
       image: 633788536644.dkr.ecr.us-east-1.amazonaws.com/expense-frontend:2.0.1
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+spec:
+  type: LoadBalancer
+  selector:
+    appName: backend
+    projectName: backend
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80
 
